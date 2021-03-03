@@ -186,6 +186,35 @@ footer {
 	border: 5px solid light-green;
 }
 
+.column-card {
+	float: left;
+	width: 33.3%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+  }
 
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+}
+
+.card-font {
+	font-size: 30px;
+	text-align: center;
+}
+
+.card-text {
+	font-size: 15px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container-info {
+	padding: 0 20px;
+}
 
 

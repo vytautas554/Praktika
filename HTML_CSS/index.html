@@ -31,7 +31,7 @@
 			</div>
 			<div class="img-column">
 				<h2>Ngadi Chuli</h2>
-				<img src="./img/Everest.jpg" alt="Everest" class="img-reduce">
+				<img src="./img/Ngadi_Chuli.jpg" alt="Everest" class="img-reduce">
 				<a href="https://en.wikipedia.org/wiki/Ngadi_Chuli" class="button" target="_blank">Aplankyti puslapį</a>
 			</div>
 			<div class="img-column">
@@ -72,25 +72,25 @@
 			<tr>
 				<th>1</th>
 				<th>Everestas</th>
-				<th>8,848.86</th>
+				<th id="height">8.848</th>
 				<th><a href="https://en.wikipedia.org/wiki/Mount_Everest" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 			<tr>
 				<th>10</th>
 				<th>Annapurna</th>
-				<th>8,091</th>
+				<th id="height">8.091</th>
 				<th><a href="https://en.wikipedia.org/wiki/Annapurna_Massif" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 			<tr>
 				<th>20</th>
 				<th>Ngadi Chuli</th>
-				<th>7,871</th>
+				<th>7.871</th>
 				<th><a href="https://en.wikipedia.org/wiki/Ngadi_Chuli" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 			<tr>
 				<th>30</th>
 				<th>Dhaulagiri</th>
-				<th>7,751</th>
+				<th>7.751</th>
 				<th><a href="https://en.wikipedia.org/wiki/Dhaulagiri" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 		</table>
@@ -105,36 +105,43 @@
 			<tr>
 				<th>40</th>
 				<th>Gangkhar Puensum</th>
-				<th>7,570</th>
+				<th>7.570</th>
 				<th><a href="https://en.wikipedia.org/wiki/Gangkhar_Puensum" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 			<tr>
 				<th>50</th>
 				<th>Ismoil Somoni Peak</th>
-				<th>7,495</th>
+				<th>7.495</th>
 				<th><a href="https://en.wikipedia.org/wiki/Ismoil_Somoni_Peak" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 			<tr>
 				<th>60</th>
 				<th>Jengish Chokusu</th>
-				<th>7,439</th>
+				<th>7.439</th>
 				<th><a href="https://en.wikipedia.org/wiki/Jengish_Chokusu" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 			<tr>
 				<th>70</th>
 				<th>Ultar</th>
-				<th>7,388</th>
+				<th>7.388</th>
 				<th><a href="https://en.wikipedia.org/wiki/Ultar" target="_blank">Skaityti daugiau</a></th>
 			</tr>
 		</table>
+
+		<div>
+			<h2>Bendras aukštis metrais: <span class="b"></span></h2>
+		</div>
 		
 		<div>
 			<div class="p1 margin-top">
-				<h4 class="font-25">Everestas</h4>
+				<h4 class="font-25 font-italic" id="bigger-font">Everestas</h4>
+				<button type="button" onclick="fontBigger()">Padidinti</button>
+				<button type="button" onclick="fontItalic()">Pakeisti stilių</button>
 				<p>Džomolungma arba Everestas, taip pat vadinama Sagarmatha – aukščiausias Žemės viršukalnė, virš jūros lygio iškylanti 8850 m. Kalnas priklauso Himalajų kalnyno Mahanlangūr Himalo kalnagūbriui, skiriančiame Nepalą nuo autonominės Kinijos Tibeto srities. Nepalo pusėje šalia Džmolungmos įsikūręs Sagarmathos nacionalinis parkas, įtrauktas į UNESCO Pasaulio paveldo sąrašą.</p>
 			</div>
 			<div class="p2 margin-top">
-				<h4 class="font-25">Annapurna</h4>
+				<h4 class="font-25" id="change-text">Annapurna</h4>
+				<button type="button" onclick="changeText()">Pakeisti textą</button>
 				<p> Kalnų masyvas Himalajuose, Nepalo teritorijoje, į vakarus nuo Džomolungmos. Aukštis iki 8091 m. Masyvas susidaręs iš magminių ir nuosėdinių uolienų. Iki 3300 m auga spygliuočių miškai. Aukščiau kaip 4800 m sniegynai ir ledynai</p>
 			</div>
 			<div class="p3 margin-top">
@@ -172,5 +179,6 @@
 			<p><span>&#169</span> 2021 Vytautas Krapikas</p>
 		</footer>
 			
+		<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>

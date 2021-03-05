@@ -11,11 +11,28 @@ function changeText () {
     document.getElementById('change-text').innerHTML = 'Dešimtas pagal dydį kalnas';
 }
 
-var moutainsHeight = 8.848 + 8.091 + 7.871 + 7.751 + 7.570 + 7.495 + 7.439 + 7.388;
-var c = moutainsHeight.toFixed(3);
-
-document.querySelector('.b').innerHTML = c;
 // end of index
 
-// index1
+// index3
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById('img1');
+var captionText = document.getElementById('caption');
+
+img.onclick = function () {
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName('close')[0];
+
+span.onclick = function () {
+    modal.style.display = 'none';
+}
+
+
+
+// end of index
+
 

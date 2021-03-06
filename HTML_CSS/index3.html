@@ -10,9 +10,10 @@
 			<ol><a href="./index1.html">Top5</a></ol>
 			<ol><a href="./index2.html">Top6-10</a></ol>
 			<ol><a href="./index3.html">Top11-15</a></ol>
-			<ol><a href="./index4.html">Top16-20</a></ol>
 		</ul>
 
+
+		<h2>Paspausti ant nuotraukos</h2>
 		<div>
 			<img id="myImg" class="img-reduce" src="./img/Annapurna_I.jpg" alt="Annapurna_I">
 			<div id="myModal" class="modal">
@@ -26,6 +27,23 @@
 			<p><span>&#169</span> 2021 Vytautas Krapikas</p>
 		</footer>
 
-		<script type="text/javascript" src="script.js"></script>
+		<script>
+			var modal = document.getElementById('myModal');
+			var img = document.getElementById('myImg');
+			var modalImg = document.getElementById('img1');
+			var captionText = document.getElementById('caption');
+
+			img.onclick = function () {
+				modal.style.display = 'block';
+				modalImg.src = this.src;
+				captionText.innerHTML = this.alt;
+			}
+
+			var span = document.getElementsByClassName('close')[0];
+
+			span.onclick = function () {
+				modal.style.display = 'none';
+			}
+		</script>
 	</body>
 </html>

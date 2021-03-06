@@ -1,35 +1,40 @@
-// index
-function fontBigger () {
-    document.getElementById('bigger-font').style.fontSize = '50px';
-}
+// // index
+// function fontBigger () {
+//     document.getElementById('bigger-font').style.fontSize = '50px';
+// }
 
-function fontItalic () {
-    document.getElementById('bigger-font').style.fontStyle = 'italic';
-}
+// function fontItalic () {
+//     document.getElementById('bigger-font').style.fontStyle = 'italic';
+// }
 
-function changeText () {
-    document.getElementById('change-text').innerHTML = 'Dešimtas pagal dydį kalnas';
-}
+// function changeText () {
+//     document.getElementById('change-text').innerHTML = 'Dešimtas pagal dydį kalnas';
+// }
 
-// end of index
+// document.getElementById('myForm').addEventListener('submit', message);
 
-// index3
-var modal = document.getElementById('myModal');
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById('img1');
-var captionText = document.getElementById('caption');
+// function message () {
+//     alert('Jūsų forma priimta');
+// }
+// // end of index
 
-img.onclick = function () {
-    modal.style.display = 'block';
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
+// // index3
+// var modal = document.getElementById('myModal');
+// var img = document.getElementById('myImg');
+// var modalImg = document.getElementById('img1');
+// var captionText = document.getElementById('caption');
 
-var span = document.getElementsByClassName('close')[0];
+// img.onclick = function () {
+//     modal.style.display = 'block';
+//     modalImg.src = this.src;
+//     captionText.innerHTML = this.alt;
+// }
 
-span.onclick = function () {
-    modal.style.display = 'none';
-}
+// var span = document.getElementsByClassName('close')[0];
+
+// span.onclick = function () {
+//     modal.style.display = 'none';
+// }
 
 
 

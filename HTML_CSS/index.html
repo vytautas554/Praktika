@@ -9,9 +9,8 @@
 		<ul class="nav">
 			<ol><a href="./index.html">Pagrindinis</a></ol>
 			<ol><a href="./index1.html">Top5</a></ol>
-			<ol><a href="./index2.html">Top5-10</a></ol>
-			<ol><a href="./index3.html">Top10-15</a></ol>
-			<ol><a href="./index4.html">Top15-20</a></ol>
+			<ol><a href="./index2.html">Top6-10</a></ol>
+			<ol><a href="./index3.html">Top11-15</a></ol>
 		</ul>
 		
 		<header>
@@ -151,7 +150,7 @@
 		</div>
 
 		<div class="form-div">
-			<form>
+			<form id="myForm">
 				<label style="font-size: 25px">Vardas</label><br>
 				<input class="input-text" type="text" placeholder="Jūsų vardas" required ><br>
 				<label style="font-size: 25px">Pavardė</label><br>
@@ -179,6 +178,24 @@
 			<p><span>&#169</span> 2021 Vytautas Krapikas</p>
 		</footer>
 			
-		<script type="text/javascript" src="script.js"></script>
+		<script>
+			function fontBigger () {
+				document.getElementById('bigger-font').style.fontSize = '50px';
+			}
+
+			function fontItalic () {
+				document.getElementById('bigger-font').style.fontStyle = 'italic';
+			}
+
+			function changeText () {
+				document.getElementById('change-text').innerHTML = 'Dešimtas pagal dydį kalnas';
+			}
+
+			document.getElementById('myForm').addEventListener('submit', message);
+
+			function message () {
+				alert('Jūsų forma priimta');
+			}
+		</script>
 	</body>
 </html>

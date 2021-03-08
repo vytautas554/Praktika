@@ -134,8 +134,7 @@
 		<div>
 			<div class="p1 margin-top">
 				<h4 class="font-25 font-italic" id="bigger-font">Everestas</h4>
-				<button type="button" onclick="fontBigger()" class="button-change">Padidinti</button>
-				<button type="button" onclick="fontItalic()" class="button-change">Pakeisti stilių</button>
+				<button id="button" type="button" onclick="fontBigger()" class="button-change">Padidinti</button>
 				<p>Džomolungma arba Everestas, taip pat vadinama Sagarmatha – aukščiausias Žemės viršukalnė, virš jūros lygio iškylanti 8850 m. Kalnas priklauso Himalajų kalnyno Mahanlangūr Himalo kalnagūbriui, skiriančiame Nepalą nuo autonominės Kinijos Tibeto srities. Nepalo pusėje šalia Džmolungmos įsikūręs Sagarmathos nacionalinis parkas, įtrauktas į UNESCO Pasaulio paveldo sąrašą.</p>
 			</div>
 			<div class="p2 margin-top">
@@ -143,10 +142,11 @@
 				<button type="button" onclick="changeText()" class="button-change">Pakeisti textą</button>
 				<p> Kalnų masyvas Himalajuose, Nepalo teritorijoje, į vakarus nuo Džomolungmos. Aukštis iki 8091 m. Masyvas susidaręs iš magminių ir nuosėdinių uolienų. Iki 3300 m auga spygliuočių miškai. Aukščiau kaip 4800 m sniegynai ir ledynai</p>
 			</div>
-			<div class="p3 margin-top">
-				<h4 class="font-25">Ngadi Chuli</h4>
+			<div id="hideDiv" class="p3 margin-top">
+				<h4 id="hideP" class="font-25">Ngadi Chuli</h4>
 				<p>Ngadi Chuli yra aukštas aukščiausiojo lygio susitikimas Nepale, Mansiri Himal, dar žinomu kaip Gurkha masyvas. Šalia šiaurės yra Manaslu, o pietuose - Himalchuli. Nepaisant aukščiausio 20 aukščio, Ngadi Chuli buvo liptas tik vieną ar du kartus. </p>
 			</div>
+			<button id="hidePar" type="button" onclick="hideP()" class="button-change">Paslėpti</button>
 		</div>
 
 		<div class="form-div">
@@ -180,19 +180,48 @@
 			
 		<script>
 			function fontBigger () {
-				document.getElementById('bigger-font').style.fontSize = '50px';
-			}
-
-			function fontItalic () {
-				document.getElementById('bigger-font').style.fontStyle = 'italic';
+				var change = document.getElementById('bigger-font');
+				var changeButton = document.getElementById('button');
+				if (changeButton.innerHTML === 'Padidinti') {
+					changeButton.innerHTML = 'Sumažinti';
+				} else {
+					changeButton.innerHTML = 'Padidinti'
+				}
+				if (change.innerHTML === 'Everestas') {
+					change.innerHTML = 'Džomolungma';
+					change.style.fontSize = '50px';
+				} else {
+					change.innerHTML = 'Everestas';
+					change.style.fontSize = '30px';
+				}
 			}
 
 			function changeText () {
-				document.getElementById('change-text').innerHTML = 'Dešimtas pagal dydį kalnas';
+				var changeFontText = document.getElementById('change-text');
+				if (changeFontText.innerHTML === 'Annapurna') {
+					changeFontText.innerHTML = 'Dešimtas pagal dydį kalnas';
+				} else {
+					changeFontText.innerHTML = 'Annapurna';
+				}
 			}
 
-			document.getElementById('myForm').addEventListener('submit', message);
+			function hideP () {
+				var hide = document.getElementById('hideDiv');
+				var changeButtonP = document.getElementById('hidePar');
+				if (changeButtonP.innerHTML === 'Paslėpti') {
+					changeButtonP.innerHTML = 'Parodyti';
+				} else {
+					changeButtonP.innerHTML = 'Paslėpti';
+				}
+				if (hide.style.display === 'none') {
+					hide.style.display = 'block';
+				} else {
+					hide.style.display = 'none';
+				}
+			}
 
+			
+			document.getElementById('myForm').addEventListener('submit', message);
 			function message () {
 				alert('Jūsų forma priimta');
 			}

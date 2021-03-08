@@ -22,6 +22,14 @@
 				<div id="caption"></div>
 			</div>
 		</div>
+		<div>
+			<img id="myImg" class="img-reduce" src="./img/Broad_Peak.jpg" alt="Broad_Peak">
+			<div id="myModal" class="modal">
+				<span class="close">&times;</span>
+				<img id="img1" class="modal-content">
+				<div id="caption"></div>
+			</div>
+		</div>
 
 		<footer class="margin-top">
 			<p><span>&#169</span> 2021 Vytautas Krapikas</p>
@@ -29,14 +37,18 @@
 
 		<script>
 			var modal = document.getElementById('myModal');
-			var img = document.getElementById('myImg');
+			var images = document.getElementsByClassName('img-reduce');
 			var modalImg = document.getElementById('img1');
 			var captionText = document.getElementById('caption');
 
-			img.onclick = function () {
-				modal.style.display = 'block';
-				modalImg.src = this.src;
-				captionText.innerHTML = this.alt;
+
+			for (var i = 0; i < images.lenght; i++) {
+				// var img = images[i];
+				img.onclick = function () {
+					modal.style.display = 'block';
+					modalImg.src = this.src;
+					captionText.innerHTML = this.alt;
+				}
 			}
 
 			var span = document.getElementsByClassName('close')[0];

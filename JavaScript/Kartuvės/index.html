@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Kartuvės</title>
+</head>
+<body>
+    <div class="container">
+        <img id="hangmanPic" src="./img/kartuves.jpg" alt="kartuves">
+        <h1 class="text-center">Kartuvės</h1>
+        <div class="float-right">Blogi spėjimai: <span id="mistakes"> 0 </span> iš <span id="maxWrong">6</span></div>
+        <div class="text-center">
+            <p>Atspėkite sporto šaką: </p>
+            <p id="wordGuess">Spėjama sporto šaka</p>
+            <div id="keyboard"></div>
+            <button class="btn btn-success" onclick="reset()">Bandyti dar kartą</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

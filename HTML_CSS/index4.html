@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Žaidimas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <h1>Atspėk kalno vietą pasauliniame reitinge</h1>
+        <div id="mountain"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer button"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer button"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+        <div id="remove" onclick="removeNumber()" class="numberContainer"></div>
+    </div>
+</body>
+
+<script>
+    var mountain = ['Everestas', 'K2', 'Kangchenjunga', 'Lhotse', 'Makalu'];
+    var randomMountain = mountain[Math.floor(Math.random()*mountain.length)];
+    // console.log(randomMountain);
+    document.getElementById('mountain').innerHTML = randomMountain;
+    
+    var numbersArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+    var numberBox = document.getElementsByClassName('numberContainer');
+    for (var i=0; i < numberBox.length; i++) {
+        numberBox[i].innerHTML = numbersArr[i];
+    }
+
+    function removeNumber () {
+        var remove = document.getElementById('remove');
+        
+            remove.style.display = 'none';
+        
+    }
+
+
+</script>
+</html>

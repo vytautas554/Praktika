@@ -9,16 +9,18 @@
     <title>Kartuvės</title>
 </head>
 <body>
-    <div class="container">
-        <img id="hangmanPic" src="./img/kartuves.jpg" alt="kartuves">
-        <h1 class="text-center">Kartuvės</h1>
-        <div class="float-right">Blogi spėjimai: <span id="mistakes"> 0 </span> iš <span id="maxWrong">6</span></div>
-        <div class="text-center">
-            <p>Atspėkite sporto šaką: </p>
-            <p id="wordGuess">Spėjama sporto šaka</p>
-            <div id="keyboard"></div>
-            <button class="btn btn-success" onclick="reset()">Bandyti dar kartą</button>
-        </div>
+    <div class="center">
+        <h1>Kartuvės</h1>
+        <h2>Atspėkite sporto šaką</2>
+    </div>
+    <div class="center">
+        <img id="hangmanPic" class="img" src="./img/0.jpg" alt="hangman">
+    </div>
+    <div class="center">
+        <div>Galimi spėjimai: <span id="mistakes">0</span> iš <span id="maxWrong"></span></div>
+        <p id="wordLenght"></p>
+        <div id="buttons"></div>
+        <button class="button" onclick="reset()">Bandyti dar kartą</button>
     </div>
     <script src="./script.js"></script>
 </body>

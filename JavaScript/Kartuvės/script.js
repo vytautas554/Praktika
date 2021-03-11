@@ -11,7 +11,7 @@ let sports = [
     'plaukimas',
 ]
 
-// let alphabet = 'abcdeėfghijklmnoprsštuvy';
+let alphabet = 'abcdeėfghijklmnoprsštuvy';
 
 
 let answer = '';
@@ -25,7 +25,7 @@ function randomWord () {
 }
 
 function createButtons () {
-   let buttonHTML = 'abcdeėfghijklmnoprsštuvy'.split('').map(letter => 
+   let buttonHTML = alphabet.split('').map(letter => 
     `
     <button
     id='` + letter +`'

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root {
+    background-color: rgb(29, 26, 26);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 60.5%;
+    font-family: 'Nova Square', cursive;
+}
+
+h1 {
+    font-size: 8rem;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 3rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: rgb(28, 26, 26);
+    background: rgb(62, 62, 219);
+}
+
+.btn:hover {
+    background: grey;
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    transform: none;
+}
+
+#highScores-btn {
+    background: yellowgreen;
+}
+
+.fa-crown {
+    font-size: 3rem;
+    margin-left: 1rem;
+}

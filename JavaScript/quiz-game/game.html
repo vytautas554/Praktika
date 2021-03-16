@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./game.css">
+    <script defer src="./game.js"></script>
+    <title>Quiz game</title>
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">Klausimas</p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">Rezultatas</p>
+                    <h1 id="score" class="hud-main-text">0</h1>
+                </div>
+            </div>
+            <div id="question">Koks klausimas?</div>
+            <div class="choise-container">
+                <p class="choise-prefix">A</p>
+                <p class="choise-text" data-number="1">Pasirinkimas</p>
+            </div>
+            <div class="choise-container">
+                <p class="choise-prefix">B</p>
+                <p class="choise-text" data-number="2">Pasirinkimas 2</p>
+            </div>
+            <div class="choise-container">
+                <p class="choise-prefix">C</p>
+                <p class="choise-text" data-number="3">Pasirinkimas 3</p>
+            </div>
+            <div class="choise-container">
+                <p class="choise-prefix">D</p>
+                <p class="choise-text" data-number="4">Pasirinkimas 4</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    color: #fff;
+}
+
+.choise-container {
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background: rgb(18, 93, 255);
+    font-size: 4rem;
+    min-width: 80rem;
+}
+
+.choise-container:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background: grey;
+    color: black;
+}
+
+.choise-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choise-text {
+    padding: 2rem;
+}
+
+.correct {
+    background: chartreuse;
+}
+
+.incorrect {
+    background: crimson;
+}

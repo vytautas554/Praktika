@@ -13,34 +13,34 @@ let availableQuestions = []
 let questions = [
     {
         question: 'kiek bus 2 + 2',
-        choise1 = '2',
-        choise2 = '3',
-        choise3 = '4',
-        choise4 = '5',
-        answer: 2
+        choise1: '2',
+        choise2: '3',
+        choise3: '4',
+        choise4: '5',
+        answer: 3
     },
     {
         question: 'Geriausias Lietuvos krepšininkas',
-        choise1 = 'Sabonis',
-        choise2 = 'Valančiūnas',
-        choise3 = 'Giedraitis',
-        choise4 = 'Mačiulis',
+        choise1: 'Sabonis',
+        choise2: 'Valančiūnas',
+        choise3: 'Giedraitis',
+        choise4: 'Mačiulis',
         answer: 1
     },
     {
         question: 'Automobilis su 4 žiedais',
-        choise1 = 'Golf',
-        choise2 = 'BMW',
-        choise3 = 'Audi',
-        choise4 = 'Vw',
+        choise1: 'Golf',
+        choise2: 'BMW',
+        choise3: 'Audi',
+        choise4: 'Vw',
         answer: 3
     },
     {
         question: 'Front-end programavimo kalba',
-        choise1 = 'SQL',
-        choise2 = 'PHP',
-        choise3 = 'NodeJs',
-        choise4 = 'JavaScript',
+        choise1: 'SQL',
+        choise2: 'PHP',
+        choise3: 'NodeJs',
+        choise4: 'JavaScript',
         answer: 4
     }
 ]
@@ -61,10 +61,49 @@ getNewQuestion = () => {
         return window.location.assign('./end.html')
     }
     questionCounter++
-    progressText.innerText = `${questionCounter} klausimas iš ${MAx_QUESTIONS}`
+    progressText.innerText = `${questionCounter} klausimas iš ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
+
+    choises.forEach(choise => {
+        const number = choise.dataset['number']
+        choise.innerText = currentQuestion['choise' + number]
+    })
+
+    availableQuestions.splice(questionsIndex, 1)
+    acceptingAnswers = true
 }
+
+choises.forEach(choise => {
+    choise.addEventListener('click', e => {
+        if (!acceptingAnswers) return
+
+        acceptingAnswers = false
+        const selectedChoise = e.target
+        const selectedAnswer = selectedChoise.dataset['number']
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
+        if(classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        }
+
+        selectedChoise.parentElement.classList.add(classToApply)
+
+        setTimeout(() => {
+            selectedChoise.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+        }, 1000)
+
+    })
+})
+
+incrementScore = num => {
+    score += num 
+    scoreText.innerText = score
+}
+
+startGame()

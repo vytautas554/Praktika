@@ -14,8 +14,8 @@ body {
 .choise-container:hover {
     cursor: pointer;
     transform: scale(1.02);
-    background: grey;
-    color: black;
+    /* background: grey;
+    color: black; */
 }
 
 .choise-prefix {
@@ -28,11 +28,11 @@ body {
 }
 
 .correct {
-    background: chartreuse;
+    background-color: chartreuse;
 }
 
 .incorrect {
-    background: crimson;
+    background-color: crimson;
 }
 
 #hud {

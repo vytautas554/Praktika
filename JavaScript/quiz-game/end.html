@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Rezultatai</title>
+</head>
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">Įrašykite savo vardą, kad išsaugoti rezultatą!</h2>
+                <input type="text" name="name" id="username" placeholder="Įrašykite savo vardą">
+                <button id="saveScoreBtn" class="btn" type="submit" onclick="saveHighScore(event)" disabled>Išsaugoti</button>
+            </form>
+            <a href="./game.html" class="btn">Žaisti dar kartą?</a>
+            <a href="./game.html" class="btn">Pagrindinis <i class="fas fa-home"></i></a>
+        </div>
+    </div>
+</body>
+</html>

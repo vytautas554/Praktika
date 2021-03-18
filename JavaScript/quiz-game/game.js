@@ -12,41 +12,89 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'kiek bus 2 + 2',
-        choise1: '2',
-        choise2: '3',
-        choise3: '4',
-        choise4: '5',
-        answer: 3
-    },
-    {
-        question: 'Geriausias Lietuvos krepšininkas',
-        choise1: 'Sabonis',
-        choise2: 'Valančiūnas',
-        choise3: 'Giedraitis',
-        choise4: 'Mačiulis',
+        question: 'Aukščiausia pasaulio viršukalnė?',
+        choise1: 'Everestas',
+        choise2: 'Lhotse',
+        choise3: 'Manaslu',
+        choise4: 'Annapurna',
         answer: 1
     },
     {
-        question: 'Automobilis su 4 žiedais',
-        choise1: 'Golf',
-        choise2: 'BMW',
-        choise3: 'Audi',
-        choise4: 'Vw',
+        question: 'Kiek pasaulyje yra kalnų, aukštesnių nei 7200m?',
+        choise1: '37',
+        choise2: 'Virš 200',
+        choise3: 'Virš 100',
+        choise4: 'Mažiau nei 100',
         answer: 3
     },
     {
-        question: 'Front-end programavimo kalba',
-        choise1: 'SQL',
-        choise2: 'PHP',
-        choise3: 'NodeJs',
-        choise4: 'JavaScript',
+        question: 'Apie 1200 žmonių kiekvienais metais bando užkopti į Everestą, kiek iš jų pavyksta?',
+        choise1: 'Mažiau nei trečdalis',
+        choise2: 'Maždaug pusė',
+        choise3: 'Apie ketvirtadalį',
+        choise4: 'Vienas žmogus iš 100',
+        answer: 2
+    },
+    {
+        question: 'Prieš kiek metų pradėjo formuotis Himalajų kalnynas?',
+        choise1: 'Daugiau nei 47mln',
+        choise2: 'Daugiau nei 20mln',
+        choise3: 'Daugiau nei 30mln',
+        choise4: 'Daugiau nei 55mln',
         answer: 4
+    },
+    {
+        question: 'Kiek vidutiniškai per metus žmonių miršta bandant įkopti į Everestą?',
+        choise1: '2',
+        choise2: '3',
+        choise3: '5',
+        choise4: '6',
+        answer: 4
+    },
+    {
+        question: 'Aukčiausias klanas saulės sistemoje yra Olympus Mons Marse, koks jo aukštis?',
+        choise1: '24944m.',
+        choise2: '15875m.',
+        choise3: '13587m.',
+        choise4: '44258m.',
+        answer: 1
+    },
+    {
+        question: 'Kiek vienu šuoliu kalnų ožka gali nušokti?',
+        choise1: 'Apie 1m.',
+        choise2: '2-3m.',
+        choise3: 'Beveik 4m.',
+        choise4: 'Ne daugiau nei 2m.',
+        answer: 3
+    },
+    {
+        question: 'Kiek procentų gėlo pasaulio vandens atsiradę iš kalnų??',
+        choise1: '70',
+        choise2: '80',
+        choise3: '90',
+        choise4: 'Mažiau nei 50',
+        answer: 2
+    },
+    {
+        question: 'Aukščiausios 14 pasaulio viršukalnių yra?',
+        choise1: 'Čilėje',
+        choise2: 'Rusijoje',
+        choise3: 'Himalajuose',
+        choise4: 'Argentinoje',
+        answer: 3
+    },
+    {
+        question: 'Kiek Everestas padidėja kiekvienais metais?',
+        choise1: 'apie 4mm',
+        choise2: 'apie 30cm',
+        choise3: 'Beveik 1m',
+        choise4: 'Nepadidėja',
+        answer: 1
     }
 ]
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 10
 
 startGame = () => {
     questionCounter = 0
